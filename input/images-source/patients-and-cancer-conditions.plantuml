@@ -1,0 +1,14 @@
+@startuml
+skinparam defaultFontName Arial
+
+title Identifying mCODE Patients: Patients-and-cancer-conditions approach
+hide footbox
+participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
+
+group Get Patients via reverse chaining
+    "Receiver" -> "Sender" : ""GET [base]/Condition?_has:Condition:subject:code:in=...""
+    "Sender" --> "Receiver" : HTTP response containing Bundle of relevant Patients
+end
+
+@enduml

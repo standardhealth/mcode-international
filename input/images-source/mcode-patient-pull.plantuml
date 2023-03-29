@@ -1,0 +1,15 @@
+@startuml
+skinparam defaultFontName Arial
+
+title Retrieving an mCODE Patient
+hide footbox
+participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
+
+group Get Patients
+    "Receiver" -> "Sender" : ""GET [base]/Patient/[id]""
+    "Sender" --> "Receiver" : HTTP response containing Patient resource
+end
+
+
+@enduml
