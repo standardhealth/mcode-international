@@ -36,7 +36,7 @@ public class ProfileTest {
     validator.getContext().loadFromFolder("fsh-generated/resources");
 
     // If you need to load external dependencies, add them here
-    validator.loadPackage("hl7.fhir.us.core", "4.0.0");
+    validator.loadPackage("hl7.fhir.uv.core", "4.0.0");
   }
 
   /**
