@@ -192,8 +192,8 @@
 <artifact id="Observation/gx-genomic-variant-somatic-polrmt" key="Observation-gx-genomic-variant-somatic-polrmt" name="gx-genomic-variant-somatic-polrmt"/>
 <artifact id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
-<artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
-<artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
+<artifact id="Organization/gx-organization-tempus-inc" key="Organization-gx-organization-tempus-inc" name="gx-organization-tempus-inc"/>
+<artifact id="Organization/gx-organization-test-institution" key="Organization-gx-organization-test-institution" name="gx-organization-test-institution"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
@@ -384,27 +384,27 @@
 <artifact id="Specimen/tumor-specimen-lobular-carcinoma-left-breast" key="Specimen-tumor-specimen-lobular-carcinoma-left-breast" name="tumor-specimen-lobular-carcinoma-left-breast"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
-<artifact id="Condition/us-core-condition-anxiety-jenny-m" key="Condition-us-core-condition-anxiety-jenny-m" name="us-core-condition-anxiety-jenny-m"/>
-<artifact id="Condition/us-core-condition-depression-jenny-m" key="Condition-us-core-condition-depression-jenny-m" name="us-core-condition-depression-jenny-m"/>
-<artifact id="Condition/us-core-condition-hypertension-jenny-m" key="Condition-us-core-condition-hypertension-jenny-m" name="us-core-condition-hypertension-jenny-m"/>
-<artifact id="DiagnosticReport/us-core-diagnosticreport-lab-jenny-m" key="DiagnosticReport-us-core-diagnosticreport-lab-jenny-m" name="us-core-diagnosticreport-lab-jenny-m"/>
-<artifact id="Observation/us-core-observation-lab-neutrophils-jenny-m" key="Observation-us-core-observation-lab-neutrophils-jenny-m" name="us-core-observation-lab-neutrophils-jenny-m"/>
-<artifact id="Observation/us-core-observation-lab-sentinel-nodes-jenny-m" key="Observation-us-core-observation-lab-sentinel-nodes-jenny-m" name="us-core-observation-lab-sentinel-nodes-jenny-m"/>
-<artifact id="Observation/us-core-observation-lab-tumor-dcis-jenny-m" key="Observation-us-core-observation-lab-tumor-dcis-jenny-m" name="us-core-observation-lab-tumor-dcis-jenny-m"/>
-<artifact id="Observation/us-core-observation-lab-tumor-grade-jenny-m" key="Observation-us-core-observation-lab-tumor-grade-jenny-m" name="us-core-observation-lab-tumor-grade-jenny-m"/>
-<artifact id="Observation/us-core-observation-lab-tumor-invasion-jenny-m" key="Observation-us-core-observation-lab-tumor-invasion-jenny-m" name="us-core-observation-lab-tumor-invasion-jenny-m"/>
-<artifact id="Observation/us-core-observation-lab-tumor-margins-jenny-m" key="Observation-us-core-observation-lab-tumor-margins-jenny-m" name="us-core-observation-lab-tumor-margins-jenny-m"/>
-<artifact id="Organization/us-core-organization-bedrock-medicine" key="Organization-us-core-organization-bedrock-medicine" name="us-core-organization-bedrock-medicine"/>
-<artifact id="Organization/us-core-organization-physician-services-inc" key="Organization-us-core-organization-physician-services-inc" name="us-core-organization-physician-services-inc"/>
-<artifact id="Practitioner/us-core-practitioner-jane-radiotech" key="Practitioner-us-core-practitioner-jane-radiotech" name="us-core-practitioner-jane-radiotech"/>
-<artifact id="Practitioner/us-core-practitioner-kyle-anydoc" key="Practitioner-us-core-practitioner-kyle-anydoc" name="us-core-practitioner-kyle-anydoc"/>
-<artifact id="Practitioner/us-core-practitioner-mary-obgyn" key="Practitioner-us-core-practitioner-mary-obgyn" name="us-core-practitioner-mary-obgyn"/>
-<artifact id="Practitioner/us-core-practitioner-nancy-oncology-nurse" key="Practitioner-us-core-practitioner-nancy-oncology-nurse" name="us-core-practitioner-nancy-oncology-nurse"/>
-<artifact id="Practitioner/us-core-practitioner-owen-oncologist" key="Practitioner-us-core-practitioner-owen-oncologist" name="us-core-practitioner-owen-oncologist"/>
-<artifact id="Practitioner/us-core-practitioner-peter-pathologist" key="Practitioner-us-core-practitioner-peter-pathologist" name="us-core-practitioner-peter-pathologist"/>
-<artifact id="Procedure/us-core-procedure-biopsy-jenny-m" key="Procedure-us-core-procedure-biopsy-jenny-m" name="us-core-procedure-biopsy-jenny-m"/>
-<artifact id="Procedure/us-core-procedure-mammogram-jenny-m" key="Procedure-us-core-procedure-mammogram-jenny-m" name="us-core-procedure-mammogram-jenny-m"/>
-<artifact id="Observation/us-core-smokingstatus-jenny-m" key="Observation-us-core-smokingstatus-jenny-m" name="us-core-smokingstatus-jenny-m"/>
+<artifact id="Condition/condition-anxiety-jenny-m" key="Condition-condition-anxiety-jenny-m" name="condition-anxiety-jenny-m"/>
+<artifact id="Condition/condition-depression-jenny-m" key="Condition-condition-depression-jenny-m" name="condition-depression-jenny-m"/>
+<artifact id="Condition/condition-hypertension-jenny-m" key="Condition-condition-hypertension-jenny-m" name="condition-hypertension-jenny-m"/>
+<artifact id="DiagnosticReport/diagnosticreport-lab-jenny-m" key="DiagnosticReport-diagnosticreport-lab-jenny-m" name="diagnosticreport-lab-jenny-m"/>
+<artifact id="Observation/observation-lab-neutrophils-jenny-m" key="Observation-observation-lab-neutrophils-jenny-m" name="observation-lab-neutrophils-jenny-m"/>
+<artifact id="Observation/observation-lab-sentinel-nodes-jenny-m" key="Observation-observation-lab-sentinel-nodes-jenny-m" name="observation-lab-sentinel-nodes-jenny-m"/>
+<artifact id="Observation/observation-lab-tumor-dcis-jenny-m" key="Observation-observation-lab-tumor-dcis-jenny-m" name="observation-lab-tumor-dcis-jenny-m"/>
+<artifact id="Observation/observation-lab-tumor-grade-jenny-m" key="Observation-observation-lab-tumor-grade-jenny-m" name="observation-lab-tumor-grade-jenny-m"/>
+<artifact id="Observation/observation-lab-tumor-invasion-jenny-m" key="Observation-observation-lab-tumor-invasion-jenny-m" name="observation-lab-tumor-invasion-jenny-m"/>
+<artifact id="Observation/observation-lab-tumor-margins-jenny-m" key="Observation-observation-lab-tumor-margins-jenny-m" name="observation-lab-tumor-margins-jenny-m"/>
+<artifact id="Organization/organization-bedrock-medicine" key="Organization-organization-bedrock-medicine" name="organization-bedrock-medicine"/>
+<artifact id="Organization/organization-physician-services-inc" key="Organization-organization-physician-services-inc" name="organization-physician-services-inc"/>
+<artifact id="Practitioner/practitioner-jane-radiotech" key="Practitioner-practitioner-jane-radiotech" name="practitioner-jane-radiotech"/>
+<artifact id="Practitioner/practitioner-kyle-anydoc" key="Practitioner-practitioner-kyle-anydoc" name="practitioner-kyle-anydoc"/>
+<artifact id="Practitioner/practitioner-mary-obgyn" key="Practitioner-practitioner-mary-obgyn" name="practitioner-mary-obgyn"/>
+<artifact id="Practitioner/practitioner-nancy-oncology-nurse" key="Practitioner-practitioner-nancy-oncology-nurse" name="practitioner-nancy-oncology-nurse"/>
+<artifact id="Practitioner/practitioner-owen-oncologist" key="Practitioner-practitioner-owen-oncologist" name="practitioner-owen-oncologist"/>
+<artifact id="Practitioner/practitioner-peter-pathologist" key="Practitioner-practitioner-peter-pathologist" name="practitioner-peter-pathologist"/>
+<artifact id="Procedure/procedure-biopsy-jenny-m" key="Procedure-procedure-biopsy-jenny-m" name="procedure-biopsy-jenny-m"/>
+<artifact id="Procedure/procedure-mammogram-jenny-m" key="Procedure-procedure-mammogram-jenny-m" name="procedure-mammogram-jenny-m"/>
+<artifact id="Observation/smokingstatus-jenny-m" key="Observation-smokingstatus-jenny-m" name="smokingstatus-jenny-m"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <page key="many" name="(many)"/>
 <page key="NA" name="(NA)"/>

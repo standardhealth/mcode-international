@@ -21,7 +21,7 @@ In addition to providing examples of mCODE profiles, this extended example demon
 <strong>Note:</strong> patient and clinical data in the narrative example below are linked to the relevant FHIR examples using <a href="#"><code style="background-color: #f5f2f0; color: #000;">this styling</code></a>.
 </div>
 
-[`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-comorbidities-jenny-m.html) significant for [`depression`](Condition-us-core-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-pack-years-jenny-m.html) (current smoker), [`anxiety`](Condition-us-core-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-us-core-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
+[`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-comorbidities-jenny-m.html) significant for [`depression`](Condition-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-pack-years-jenny-m.html) (current smoker), [`anxiety`](Condition-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
 
 During a routine screening mammography in February 2018, an abnormality was detected as a possible mass and suspected breast cancer. The gynecologist performing the biopsy refers the patient to an oncologist for further workup. An ultrasound-guided biopsy was performed along with prognostic tumor marker tests with [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is referred to an oncologist who clinically reviews the mammogram and tumor marker results, and clinical staged the [`cancer diagnosis`](Condition-primary-cancer-condition-jenny-m.html) as [`cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html)[`N0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html).
 
@@ -29,7 +29,7 @@ Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician
 
 [^1]: For the purposes of this example, we are assuming that a single relevant variant was returned by the clinical genomics laboratory. In practice, genomics testing may return (many) more variants. The standards for representing genomics data are currently under development by the [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW/WorkGroup+Home). The expectation is that mCODE will adopt those standards when they are completed.
 
-A [`partial mastectomy`](Procedure-cancer-related-surgical-procedure-jenny-m.html) was performed, revealing a 2.5 cm tumor with no [`lymph-vascular invasion`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) and [`negative margins of excision`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html). Three sentinel lymph nodes were excised and were [`negative for metastatic carcinoma`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html).  The [`tumor specimen`](Specimen-tumor-specimen-left-breast-jenny-m.html) was sent to the pathologist. The [`pathology report`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) revealed a [`2.5cm malignant tumor`](Observation-tumor-size-jenny-m.html) [`histological grade 2`](Observation-us-core-observation-lab-tumor-grade-jenny-m.html) [`invasive ductal`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) adenocarcinoma with prognostic tumor markers [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is pathologically staged as [`pT3`](Observation-tnm-pathologic-primary-tumor-category-jenny-m.html) [`pN0`](Observation-tnm-pathologic-distant-metastases-category-jenny-m.html), [`stage group IIB`](Observation-tnm-pathologic-stage-group-jenny-m.html).
+A [`partial mastectomy`](Procedure-cancer-related-surgical-procedure-jenny-m.html) was performed, revealing a 2.5 cm tumor with no [`lymph-vascular invasion`](Observation-observation-lab-tumor-invasion-jenny-m.html) and [`negative margins of excision`](Observation-observation-lab-tumor-margins-jenny-m.html). Three sentinel lymph nodes were excised and were [`negative for metastatic carcinoma`](Observation-observation-lab-sentinel-nodes-jenny-m.html).  The [`tumor specimen`](Specimen-tumor-specimen-left-breast-jenny-m.html) was sent to the pathologist. The [`pathology report`](DiagnosticReport-diagnosticreport-lab-jenny-m.html) revealed a [`2.5cm malignant tumor`](Observation-tumor-size-jenny-m.html) [`histological grade 2`](Observation-observation-lab-tumor-grade-jenny-m.html) [`invasive ductal`](Observation-observation-lab-tumor-dcis-jenny-m.html) adenocarcinoma with prognostic tumor markers [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is pathologically staged as [`pT3`](Observation-tnm-pathologic-primary-tumor-category-jenny-m.html) [`pN0`](Observation-tnm-pathologic-distant-metastases-category-jenny-m.html), [`stage group IIB`](Observation-tnm-pathologic-stage-group-jenny-m.html).
 
 A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthcare-professionals/oncotype-dx-breast-recurrence-score/about-the-test) yielded a [`recurrence score of 47`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html).
 
@@ -91,18 +91,18 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Aunt With Ovarian Cancer`](FamilyMemberHistory-family-member-history-aunt-jenny-m.html) |[R4FamilyMemberHistory]|
 | [`Sister With Breast Cancer`](FamilyMemberHistory-family-member-history-sister-jenny-m.html) |[R4FamilyMemberHistory]|
 | [`Uncle With Pancreatic Cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html) |[R4FamilyMemberHistory]|
-| [`Comorbidity: Anxiety Diagnosis`](Condition-us-core-condition-anxiety-jenny-m.html) |[Condition]|
-| [`Comorbidity: Depression Diagnosis`](Condition-us-core-condition-depression-jenny-m.html) |[Condition]|
-| [`Comorbidity: Hypertension Diagnosis`](Condition-us-core-condition-hypertension-jenny-m.html) |[Condition]|
-| [`Pathology Report`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) |[DiagnosticReport]|
-| [`DCIS intraductal extension Report`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) |[R4Observation]|
-| [`Histologic Grade in Specimen: Grade 2`](Observation-us-core-observation-lab-tumor-grade-jenny-m.html) |[R4Observation]|
-| [`Tumor Invasion Report`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) |[R4Observation]|
-| [`Tumor Margins Report`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) |[R4Observation]|
-| [`Sentinel Lymph Nodes Report: Negative`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) |[R4Observation]|
-| [`Oncologist Owen`](Practitioner-us-core-practitioner-owen-oncologist.html) |[Practitioner]|
-| [`Breast Biopsy Procedure`](Procedure-us-core-procedure-biopsy-jenny-m.html) |[Procedure]|
-| [`Mammogram Procedure`](Procedure-us-core-procedure-mammogram-jenny-m.html) |[Procedure]|
+| [`Comorbidity: Anxiety Diagnosis`](Condition-condition-anxiety-jenny-m.html) |[Condition]|
+| [`Comorbidity: Depression Diagnosis`](Condition-condition-depression-jenny-m.html) |[Condition]|
+| [`Comorbidity: Hypertension Diagnosis`](Condition-condition-hypertension-jenny-m.html) |[Condition]|
+| [`Pathology Report`](DiagnosticReport-diagnosticreport-lab-jenny-m.html) |[DiagnosticReport]|
+| [`DCIS intraductal extension Report`](Observation-observation-lab-tumor-dcis-jenny-m.html) |[R4Observation]|
+| [`Histologic Grade in Specimen: Grade 2`](Observation-observation-lab-tumor-grade-jenny-m.html) |[R4Observation]|
+| [`Tumor Invasion Report`](Observation-observation-lab-tumor-invasion-jenny-m.html) |[R4Observation]|
+| [`Tumor Margins Report`](Observation-observation-lab-tumor-margins-jenny-m.html) |[R4Observation]|
+| [`Sentinel Lymph Nodes Report: Negative`](Observation-observation-lab-sentinel-nodes-jenny-m.html) |[R4Observation]|
+| [`Oncologist Owen`](Practitioner-practitioner-owen-oncologist.html) |[Practitioner]|
+| [`Breast Biopsy Procedure`](Procedure-procedure-biopsy-jenny-m.html) |[Procedure]|
+| [`Mammogram Procedure`](Procedure-procedure-mammogram-jenny-m.html) |[Procedure]|
 {: .grid }
 
 {% include markdown-link-references.md %}

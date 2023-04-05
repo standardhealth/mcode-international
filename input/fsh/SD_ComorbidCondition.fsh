@@ -38,7 +38,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 
 /*
 Profile: ComorbiditiesResponse
-Parent: USCoreQuestionnaireResponseProfile
+Parent: QuestionnaireResponse
 Id: mcode-comorbidities-response
 Title: "Comorbidities Questionnaire Response Profile"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities present and absent appear in results."

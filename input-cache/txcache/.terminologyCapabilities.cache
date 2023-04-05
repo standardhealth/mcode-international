@@ -830,16 +830,16 @@
     "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/condition-category"
   },
   {
-    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/us-core-documentreference-category"
+    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/documentreference-category"
   },
   {
-    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/us-core-observation-category"
+    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/observation-category"
   },
   {
-    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/us-core-provenance-participant-type"
+    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/provenance-participant-type"
   },
   {
-    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/us-core-tags"
+    "uri" : "http://hl7.org/fhir/uv/core/CodeSystem/tags"
   },
   {
     "uri" : "http://hl7.org/fhir/variable-type"

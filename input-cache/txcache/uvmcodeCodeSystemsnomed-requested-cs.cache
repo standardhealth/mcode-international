@@ -1,0 +1,105 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "USCRS-34777",
+        "display" : "Lymph node level IIA (qualifier value)"
+      },
+      {
+        "code" : "USCRS-34775",
+        "display" : "Lymph node level IIB (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:7a1a4d1e-7378-4a4e-af04-26beb6efbce1",
+    "timestamp" : "2023-03-30T15:01:17.089Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34777",
+      "display" : "Lymph node level IIA (qualifier value)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34775",
+      "display" : "Lymph node level IIB (qualifier value)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "USCRS-34356",
+        "display" : "Bowel space (body structure)"
+      },
+      {
+        "code" : "USCRS-34358",
+        "display" : "Small bowel space (body structure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:973172e5-6a1d-47a2-8502-b6b294326946",
+    "timestamp" : "2023-03-30T15:01:17.870Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34356",
+      "display" : "Bowel space (body structure)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/uv/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34358",
+      "display" : "Small bowel space (body structure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

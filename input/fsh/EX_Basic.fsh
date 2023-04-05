@@ -10,7 +10,7 @@ Description: "Example of Primary Cancer Condition"
 * bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-04-01"
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
@@ -23,7 +23,7 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 * stage.summary = UMLS#C2698392 "Binet Stage A"     // NCIT#C80134 "Binet Stage A"
 * stage.assessment = Reference(binet-stage-group-A)
 
@@ -37,7 +37,7 @@ Description: "Example of Secondary Cancer Condition"
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-05-01"
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 
 Instance: cancer-disease-status-improved
 InstanceOf: CancerDiseaseStatus
@@ -46,14 +46,14 @@ Description: "Example of Cancer Disease Status"
 * status = #final "final"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(us-core-practitioner-kyle-anydoc)
+* performer = Reference(practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 Instance: cancer-related-comorbidities-john-anyperson
 InstanceOf: Comorbidities
 Description: "Example of Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-john-anyperson)
-* performer = Reference(us-core-practitioner-kyle-anydoc)
+* performer = Reference(practitioner-kyle-anydoc)
 * focus = Reference(primary-cancer-condition-nsclc)
 * status = #final "final"
 * effectiveDateTime = "2019-04-01"
@@ -67,7 +67,7 @@ Instance: john-anyperson-chf
 InstanceOf: Condition
 Description: "Example of comorbid condition (congestive heart failure) present"
 * subject = Reference(cancer-patient-john-anyperson)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 * category = CondCat#problem-list-item "Problem List Item"
 * code = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 * verificationStatus = VerStatus#confirmed
@@ -148,7 +148,7 @@ Description: "Example of Patient"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
-Instance: us-core-practitioner-kyle-anydoc
+Instance: practitioner-kyle-anydoc
 InstanceOf: Practitioner
 Description: "Example of Practitioner"
 * name.family = "Anydoc"
@@ -170,7 +170,7 @@ Description: "Example of ECOG Performance Status"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(us-core-practitioner-kyle-anydoc)
+* performer = Reference(practitioner-kyle-anydoc)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 
@@ -181,7 +181,7 @@ Description: "Example of Karnofsky Performance Status"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(us-core-practitioner-kyle-anydoc)
+* performer = Reference(practitioner-kyle-anydoc)
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
 * code = LNC#89243-0
@@ -192,7 +192,7 @@ Description: "Example of Cancer Related Surgical Procedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(cancer-patient-john-anyperson)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 * performedDateTime = "2019-03-01"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
@@ -274,7 +274,7 @@ Description: "Example of CancerRelatedMedicationRequest"
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* requester = Reference(us-core-practitioner-kyle-anydoc)
+* requester = Reference(practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "250mg orally once daily with or without food"
 * dosageInstruction.route = SCT#26643006 "Oral use"
@@ -296,7 +296,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* requester = Reference(us-core-practitioner-kyle-anydoc)
+* requester = Reference(practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "calculate absolute dose on day of administration."
 * dosageInstruction.route = SCT#47625008 "Intravenous use"
@@ -313,5 +313,5 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 * status = ObsStatus#final
 * code = LNC#718-7 "Hemoglobin [Mass/volume] in Blood"
 * effectiveDateTime = "2020-03-06"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * valueQuantity = 13.5 'g/dl' "g/dl"

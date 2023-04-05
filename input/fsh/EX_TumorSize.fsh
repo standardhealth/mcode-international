@@ -10,7 +10,7 @@ Description: "mCODE Example for Primary Cancer Condition (breast). The example s
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 * subject = Reference(cancer-patient-eve-anyperson)
 * onsetDateTime = "2019-04-01"
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 

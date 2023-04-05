@@ -62,36 +62,36 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"
 // Other optional entries like vital signs, providers
 // Note: If named slices are used, then the first unnamed slice entry must be numbered
-* entry[+].resource = us-core-procedure-biopsy-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-biopsy-jenny-m"
+* entry[+].resource = procedure-biopsy-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/procedure-biopsy-jenny-m"
 * entry[+].resource = bodyweight-jenny-m-2018-03-16
 * entry[=].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-16"
-* entry[+].resource = us-core-observation-lab-neutrophils-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-neutrophils-jenny-m"
-* entry[+].resource = us-core-organization-physician-services-inc
-* entry[=].fullUrl = "http://example.org/fhir/Organization/us-core-organization-physician-services-inc"
-* entry[+].resource = us-core-procedure-mammogram-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-mammogram-jenny-m"
+* entry[+].resource = observation-lab-neutrophils-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/observation-lab-neutrophils-jenny-m"
+* entry[+].resource = organization-physician-services-inc
+* entry[=].fullUrl = "http://example.org/fhir/Organization/organization-physician-services-inc"
+* entry[+].resource = procedure-mammogram-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/procedure-mammogram-jenny-m"
 * entry[+].resource = family-member-history-aunt-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-aunt-jenny-m"
-* entry[+].resource = us-core-procedure-mammogram-jenny-m  // slice 31
+* entry[+].resource = procedure-mammogram-jenny-m  // slice 31
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-uncle-jenny-m"
-* entry[+].resource = us-core-diagnosticreport-lab-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/us-core-diagnosticreport-lab-jenny-m"
+* entry[+].resource = diagnosticreport-lab-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/diagnosticreport-lab-jenny-m"
 * entry[+].resource = observation-smoking-pack-years-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/observation-smoking-pack-years-jenny-m"
-* entry[+].resource = us-core-observation-lab-tumor-invasion-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-invasion-jenny-m"
-* entry[+].resource = us-core-observation-lab-tumor-margins-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-margins-jenny-m"
-* entry[+].resource = us-core-observation-lab-sentinel-nodes-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-sentinel-nodes-jenny-m"
-* entry[+].resource = us-core-observation-lab-tumor-dcis-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-dcis-jenny-m"
-* entry[+].resource = us-core-practitioner-owen-oncologist
-* entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-owen-oncologist"
-* entry[+].resource = us-core-practitioner-peter-pathologist
-* entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-peter-pathologist"
+* entry[+].resource = observation-lab-tumor-invasion-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/observation-lab-tumor-invasion-jenny-m"
+* entry[+].resource = observation-lab-tumor-margins-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/observation-lab-tumor-margins-jenny-m"
+* entry[+].resource = observation-lab-sentinel-nodes-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/observation-lab-sentinel-nodes-jenny-m"
+* entry[+].resource = observation-lab-tumor-dcis-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/observation-lab-tumor-dcis-jenny-m"
+* entry[+].resource = practitioner-owen-oncologist
+* entry[=].fullUrl = "http://example.org/fhir/Practitioner/practitioner-owen-oncologist"
+* entry[+].resource = practitioner-peter-pathologist
+* entry[=].fullUrl = "http://example.org/fhir/Practitioner/practitioner-peter-pathologist"
 
 
 /* Using named slices in assignments is preferred, maybe, but it makes things longer and harder to read, IMO. So using indices instead

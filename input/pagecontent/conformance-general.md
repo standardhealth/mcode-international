@@ -5,8 +5,8 @@ This section outlines requirements and recommendations for mCODE participants. T
 
 Two roles for **mCODE Participants** are defined:
 
-* **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The Data Sender does not have to be the originator of the data it possesses. The Data Sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/uv/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
-* **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/uv/core/#us-core-actors), except the data does not have to be explicitly requested.
+* **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The Data Sender does not have to be the originator of the data it possesses. The Data Sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/uv/core/#actors), except the data sent is not assumed to be a response to a query.
+* **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender. The Data Receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The Receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/uv/core/#actors), except the data does not have to be explicitly requested.
 
 This IG currently only provides CapabilityStatements and documentation for "pull" (query-response) architectures, however, regardless how exchanges occur, all participants MUST follow the conformance requirements in this IG, **except** those specifically identified as applying only to pull architectures.
 
@@ -19,7 +19,7 @@ mCODE participants MUST meet the following requirements for conformance:
 1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
 1. [Support querying mCODE-conforming resources](#support-querying-mcode-conforming-resources)
 1. [Publish a CapabilityStatement identifying supported profiles and operations](#publish-a-capabilitystatement-identifying-supported-profiles-and-operations)
-1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
+1. [Support US Core conformance requirements](#support-conformance-requirements)
 
 
 #### Identify In-Scope Patients
@@ -64,9 +64,9 @@ Note that the requests below may return resources associated with patients who a
   * [Comorbidities]\: `GET [base]/Observation?code=http://snomed.info/sct|398192003`
   * [ECOGPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89247-1`
   * [KarnofskyPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89243-0`
-  * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html) and [US Core Vital Signs](https://hl7.org/fhir/uv/core/3.2.0/StructureDefinition-us-core-vital-signs.html): `GET [base]/Observation?category=vital-signs`
-  * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/uv/core/StructureDefinition-us-core-diagnosticreport-lab.html): `GET [base]/DiagnosticReport?category=LAB` (note that `LAB` MUST be capitalized)
-  * [US Core Laboratory Result Profile](http://hl7.org/fhir/uv/core/StructureDefinition-us-core-observation-lab.html): `GET [base]/Observation?category=laboratory`
+  * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html) and [US Core Vital Signs](https://hl7.org/fhir/uv/core/3.2.0/StructureDefinition-vital-signs.html): `GET [base]/Observation?category=vital-signs`
+  * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/uv/core/StructureDefinition-diagnosticreport-lab.html): `GET [base]/DiagnosticReport?category=LAB` (note that `LAB` MUST be capitalized)
+  * [US Core Laboratory Result Profile](http://hl7.org/fhir/uv/core/StructureDefinition-observation-lab.html): `GET [base]/Observation?category=laboratory`
 
 * Genomics
   * [GenomicVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`

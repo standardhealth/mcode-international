@@ -2,7 +2,7 @@ title: mCODE Data Dictionary
 filename: mCODEDataDictionary-STU2
 informationTabContent:
   General notes: |-
-    **Profiles not shown in data dictionary:** Profiles that are used by mCODE but defined externally to mCODE, such as vital signs (defined by FHIR or US Core), are not included in the Data Dictionary.
+    **Profiles not shown in data dictionary:** Profiles that are used by mCODE but defined externally to mCODE, such as vital signs (defined by FHIR), are not included in the Data Dictionary.
 
     **Data elements not shown in data dictionary:** Only elements marked as "Must Support" in the FHIR Implementation Guide are included in this data dictionary. These are elements that implementers are expected to provide meaningful support for; see http://hl7.org/fhir/uv/mcode/conformance.html#mustsupport-interpretation for more information.
 
@@ -26,7 +26,7 @@ informationTabContent:
     **Example:** 'Secondary Cancer Condition Code' is a data element contained by the 'Secondary Cancer Condition' profile. The 'Secondary Cancer Condition Code' data element is associated with the <http://hl7.org/fhir/uv/mcode/ValueSet/mcode-secondary-cancer-disorder-vs> value set in the 'Data elements' sheet, which indicates the value set is defined in mCODE. Additional information on this value set can be found in the 'Value sets' and 'Value set details' sheet; the former includes a description of the value set, and the latter lists the specific codes and descriptions as well as logical definitions for this value set.
 
   '"Value sets" sheet': |+
-    The 'Value Sets' sheet contains a list of mCODE-defined value sets, as well as high-level information about them.  Externally-defined value sets used by mCODE, such as LOINC answer lists and value sets defined in US Core or FHIR, are not included.
+    The 'Value Sets' sheet contains a list of mCODE-defined value sets, as well as high-level information about them.  Externally-defined value sets used by mCODE, such as LOINC answer lists and value sets defined in FHIR, are not included.
 
     **Relationship to 'Value Set Details' sheet:** In general, the 'Value Set Details' sheet contains enumerated codes and associated descriptions for a given value set, or a logical definition (when a value set is defined by a rule, rather than an explicit list of codes).
 

@@ -754,7 +754,7 @@
 																{%- elif s.name == '_query' %}=[name]&amp;[parameters]
 																{%- elif s.name == '_format' %}=[mime-type]
 																{%- elif s.name == '_pretty' %}=[true|false]
-																{%- elif s.name in ['us-core-includeprovenance'] %}
+																{%- elif s.name in ['includeprovenance'] %}
 																{%- elif s.type == 'reference' %}=[type]/[id]
 																{%- elif s.type == 'status' %}=[status]
 																{%- elif s.type == 'composite' %}=[code]&amp;[value]
@@ -851,7 +851,7 @@
 																		{%- elif p == '_query' %}=[name]&amp;[parameters]
 																		{%- elif p == '_format' %}=[mime-type]
 																		{%- elif p == '_pretty' %}=[true|false]
-																		{%- elif p in ['us-core-includeprovenance'] %}
+																		{%- elif p in ['includeprovenance'] %}
 																		{%- elif t == 'reference' %}=[type]/[id]
 																		{%- elif t == 'status' %}=[status]
 																		{%- elif t == 'composite' %}=[code]&amp;[value]

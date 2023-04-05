@@ -61,8 +61,8 @@ fhir_base_url = 'http://hl7.org/fhir/'
 f_jurisdiction = CC.CodeableConcept({
     "coding": [
         {
-            "system": "urn:iso:std:iso:3166",
-            "code": "US"
+            "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+            "code": "001"
         }
     ]
 })
@@ -70,7 +70,7 @@ conf_url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectat
 combo_url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
 # dict to for SP to get right canonicals, may use spreadsheet or package file in future.
 sp_specials = {
-    'us-core-includeprovenance': 'http://hl7.org/fhir/uv/core/SearchParameter/us-core-includeprovenance'}
+    'includeprovenance': 'http://hl7.org/fhir/uv/core/SearchParameter/includeprovenance'}
 #this should be a map to the common
 sp_common_list = ["address", "address-city", "address-country", "address-postalcode", "address-state", "address-use", "birthdate", "code", "context", "context-quantity", "context-type", "context-type-quantity", "context-type-value", "date", "description", "email", "encounter", "family", "gender", "given", "identifier", "jurisdiction", "medication", "name", "patient", "phone", "phonetic", "publisher", "status", "status", "telecom", "title", "type", "url", "version"]
 none_list = ['', ' ', 'none', 'n/a', 'N/A', 'N', 'False']
@@ -288,10 +288,10 @@ def validate(r):
         'Content-Type': 'application/fhir+json'
     }
 
-    # profile = 'http://hl7.org/fhir/uv/core/StructureDefinition/us-core-patient' # The official URL for this profile is: http://hl7.org/fhir/uv/core/StructureDefinition/us-core-patient
+    # profile = 'http://hl7.org/fhir/uv/core/StructureDefinition/patient' # The official URL for this profile is: http://hl7.org/fhir/uv/core/StructureDefinition/patient
 
     params = dict(
-        # profile = 'http://hl7.org/fhir/uv/core/StructureDefinition/us-core-patient' # The official URL for this profile is: http://hl7.org/fhir/uv/core/StructureDefinition/us-core-patient
+        # profile = 'http://hl7.org/fhir/uv/core/StructureDefinition/patient' # The official URL for this profile is: http://hl7.org/fhir/uv/core/StructureDefinition/patient
     )
 
     r = post(f'{fhir_test_server}/CapabilityStatement/$validate',
@@ -343,7 +343,6 @@ def create_capabilitystatement(meta, canon, publisher, publisher_endpoint, xls):
     cs.url = f'{canon}CapabilityStatement/{meta.title.lower()}'
     cs.version = meta.version
     cs.name = f'{kebab_to_pascal(meta.id)}{cs.resource_type}'
-#    cs.title = f'{titlecase(meta.id).replace("Us ", "US ")} {cs.resource_type}'
     cs.title = f'{meta.title} {cs.resource_type}'
     cs.status = 'active'
 
@@ -437,7 +436,7 @@ def get_combo_ext(r_type, combos):
             req_combo = X.Extension(
                 dict(
                     url='required',
-                    valueString=param  # http://hl7.org/fhir/uv/core/SearchParameter/us-core-patient-family
+                    valueString=param  # http://hl7.org/fhir/uv/core/SearchParameter/patient-family
                 )
             )
             combo_ext.extension.append(req_combo)

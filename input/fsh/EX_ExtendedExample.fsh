@@ -22,28 +22,28 @@
 
 // Mammogram 3/1/2018
 
-Instance: us-core-procedure-mammogram-jenny-m
+Instance: procedure-mammogram-jenny-m
 InstanceOf: Procedure
 Description: "Extended example: example mammogram"
 * status = #completed "completed"
 * code = SCT#71651007 "Mammography (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
-* performer.actor = Reference(us-core-practitioner-jane-radiotech)
+* performer.actor = Reference(practitioner-jane-radiotech)
 * performedDateTime = 2018-02-01
-* asserter = Reference(us-core-practitioner-mary-obgyn)
+* asserter = Reference(practitioner-mary-obgyn)
 * reasonCode = SCT#360156006 "Screening - procedure intent (qualifier value)"
 
 // Biopsy Procedure - 3/6/2018
 
-Instance: us-core-procedure-biopsy-jenny-m
+Instance: procedure-biopsy-jenny-m
 InstanceOf: Procedure
 Description: "Extended example: example biopsy procedure"
 * status = #completed "completed"
 * code = SCT#723990008 "Biopsy of breast using ultrasonographic guidance (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
-* performer.actor = Reference(us-core-practitioner-mary-obgyn)
+* performer.actor = Reference(practitioner-mary-obgyn)
 * performedDateTime = "2018-03-06"
-* asserter = Reference(us-core-practitioner-mary-obgyn)
+* asserter = Reference(practitioner-mary-obgyn)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
@@ -53,7 +53,7 @@ Description: "Extended example: example showing human specimen for genomic seque
 * status = #available "available"
 * type = SPTY#TISS
 * subject = Reference(cancer-patient-jenny-m)
-* collection.collector = Reference(us-core-practitioner-owen-oncologist)
+* collection.collector = Reference(practitioner-owen-oncologist)
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 * processing[0].timeDateTime = "2018-03-06"
 
@@ -69,7 +69,7 @@ Description: "Extended example: example showing smoking history"
 * effectiveDateTime = "2018-03-16"
 * valueQuantity = 20 '{PackYears}' "Pack-Years"
 
-Instance: us-core-condition-anxiety-jenny-m
+Instance: condition-anxiety-jenny-m
 InstanceOf: Condition
 Description: "Extended example: example showing comorbid condition (anxiety)"
 * clinicalStatus = ClinStatus#active "Active"
@@ -79,7 +79,7 @@ Description: "Extended example: example showing comorbid condition (anxiety)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2005-01-01"
 
-Instance: us-core-condition-depression-jenny-m
+Instance: condition-depression-jenny-m
 InstanceOf: Condition
 Description: "Extended example: example showing comorbid condition (depression)"
 * clinicalStatus = ClinStatus#active
@@ -88,9 +88,9 @@ Description: "Extended example: example showing comorbid condition (depression)"
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2005-01-01"
-* asserter = Reference(us-core-practitioner-owen-oncologist)
+* asserter = Reference(practitioner-owen-oncologist)
 
-Instance: us-core-condition-hypertension-jenny-m
+Instance: condition-hypertension-jenny-m
 InstanceOf: Condition
 Description: "Extended example: example showing comorbid condition (hypertension)"
 * clinicalStatus = ClinStatus#active
@@ -99,7 +99,7 @@ Description: "Extended example: example showing comorbid condition (hypertension
 * code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I11.9 "Hypertensive heart disease without heart failure"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2012-01-01"
-* asserter = Reference(us-core-practitioner-owen-oncologist)
+* asserter = Reference(practitioner-owen-oncologist)
 
 // Family History
 
@@ -136,14 +136,14 @@ Instance: cancer-related-comorbidities-jenny-m
 InstanceOf: Comorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * status = #final "final"
 * effectiveDateTime = "2018-03-16"
 * focus = Reference(primary-cancer-condition-jenny-m)
 // present -- note these could be codes instead of references (either are acceptable)
-* extension[comorbidConditionPresent][0].valueReference = Reference(us-core-condition-depression-jenny-m)
-* extension[comorbidConditionPresent][1].valueReference = Reference(us-core-condition-anxiety-jenny-m)
-* extension[comorbidConditionPresent][2].valueReference = Reference(us-core-condition-hypertension-jenny-m)
+* extension[comorbidConditionPresent][0].valueReference = Reference(condition-depression-jenny-m)
+* extension[comorbidConditionPresent][1].valueReference = Reference(condition-anxiety-jenny-m)
+* extension[comorbidConditionPresent][2].valueReference = Reference(condition-hypertension-jenny-m)
 // absent -- These could also be references, but having a resource representing a non-condition would be unusual
 * extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
 * extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
@@ -153,7 +153,7 @@ Instance: cancer-related-comorbidity-response-jenny-m
 InstanceOf: ComorbiditiesResponse
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)
-* author = Reference(us-core-practitioner-owen-oncologist)
+* author = Reference(practitioner-owen-oncologist)
 * status = #completed
 * authored = "2018-03-16"
 * item[0]
@@ -163,9 +163,9 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
   * linkId = "comorbidConditionsPresent"
   * item[0]
     * linkId = "comorbidConditionPresentReference"
-    * answer[0].valueReference = Reference(us-core-condition-depression-jenny-m)
-    * answer[1].valueReference = Reference(us-core-condition-anxiety-jenny-m)
-    * answer[2].valueReference = Reference(us-core-condition-hypertension-jenny-m)
+    * answer[0].valueReference = Reference(condition-depression-jenny-m)
+    * answer[1].valueReference = Reference(condition-anxiety-jenny-m)
+    * answer[2].valueReference = Reference(condition-hypertension-jenny-m)
 * item[2]
   * linkId = "comorbidConditionsAbsent"
   * answer[0].valueCoding = SCT#414916001 "Obesity (disorder)"
@@ -178,7 +178,7 @@ Description: "Extended example: example showing ECOG performance status"
 * status = #final "final"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
@@ -213,7 +213,7 @@ Description: "Extended example: example showing primary cancer condition"
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2018-03-16"
-* asserter = Reference(us-core-practitioner-owen-oncologist)
+* asserter = Reference(practitioner-owen-oncologist)
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
 * stage.type = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
@@ -271,7 +271,7 @@ Description: "Extended example: example showing ER status"
 * code = LNC#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * valueCodeableConcept = LNC#LA6576-8 "Positive"
 
 Instance: tumor-marker-test-pr-jenny-m
@@ -281,7 +281,7 @@ Description: "Extended example: example showing PR status"
 * code = LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
 Instance: tumor-marker-test-her2-jenny-m
@@ -291,7 +291,7 @@ Description: "Extended example: example showing HER2 status"
 * code = LNC#48676-1 "HER2 [Interpretation] in Tissue"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
 // 7-Gene Panel
@@ -350,7 +350,7 @@ Description: "Extended example: example showing partial mastectomy surgical proc
 * code = SCT#64368001 "Excision of part of breast (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
 * performedDateTime = "2018-04-01"
-* asserter = Reference(us-core-practitioner-owen-oncologist)
+* asserter = Reference(practitioner-owen-oncologist)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
@@ -369,7 +369,7 @@ Description: "Extended example: example tumor specimen"
 
 // Pathology Results
 
-Instance: us-core-diagnosticreport-lab-jenny-m
+Instance: diagnosticreport-lab-jenny-m
 InstanceOf: DiagnosticReport
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
@@ -379,20 +379,20 @@ Description: "Extended example: example of pathology findings represented as a D
 * issued = "2018-04-05T00:00:00Z"
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
-* result[0] = Reference(us-core-observation-lab-tumor-invasion-jenny-m)
-* result[1] = Reference(us-core-observation-lab-tumor-margins-jenny-m)
-* result[2] = Reference(us-core-observation-lab-sentinel-nodes-jenny-m)
+* result[0] = Reference(observation-lab-tumor-invasion-jenny-m)
+* result[1] = Reference(observation-lab-tumor-margins-jenny-m)
+* result[2] = Reference(observation-lab-sentinel-nodes-jenny-m)
 * result[3] = Reference(tumor-size-jenny-m)
-* result[4] = Reference(us-core-observation-lab-tumor-dcis-jenny-m)
+* result[4] = Reference(observation-lab-tumor-dcis-jenny-m)
 * result[5] = Reference(tumor-marker-test-her2-jenny-m)
 //** adding pathology results **//
 * result[6] = Reference(tumor-marker-test-er-jenny-m)
 * result[7] = Reference(tumor-marker-test-pr-jenny-m)
-* result[8] = Reference(us-core-observation-lab-tumor-grade-jenny-m)
-* performer = Reference(us-core-organization-physician-services-inc)
-* resultsInterpreter = Reference(us-core-practitioner-peter-pathologist)
+* result[8] = Reference(observation-lab-tumor-grade-jenny-m)
+* performer = Reference(organization-physician-services-inc)
+* resultsInterpreter = Reference(practitioner-peter-pathologist)
 
-Instance: us-core-observation-lab-tumor-invasion-jenny-m
+Instance: observation-lab-tumor-invasion-jenny-m
 InstanceOf: Observation
 Description: "Extended example: example showing negative invasion for the removed tumor"
 * status = #final "final"
@@ -402,7 +402,7 @@ Description: "Extended example: example showing negative invasion for the remove
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-Instance: us-core-observation-lab-tumor-margins-jenny-m
+Instance: observation-lab-tumor-margins-jenny-m
 InstanceOf:  Observation
 Description: "Extended example: example showing negative margins for the removed tumor"
 * status = #final "final"
@@ -412,7 +412,7 @@ Description: "Extended example: example showing negative margins for the removed
 * valueCodeableConcept = LNC#LA27151-2 "Uninvolved by invasive carcinoma"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-Instance: us-core-observation-lab-sentinel-nodes-jenny-m
+Instance: observation-lab-sentinel-nodes-jenny-m
 InstanceOf:  Observation
 Description: "Extended example: example showing 3 sentinel lymph nodes were examined"
 * status = #final "final"
@@ -435,7 +435,7 @@ Description: "Extended example: example showing tumor size"
 * component[tumorLongestDimension].valueQuantity = 2.5 'cm' "centimeters"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-Instance: us-core-observation-lab-tumor-dcis-jenny-m
+Instance: observation-lab-tumor-dcis-jenny-m
 InstanceOf:  Observation
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
@@ -445,7 +445,7 @@ Description: "Extended example: example showing DCIS diagnosis"
 * valueCodeableConcept = LNC#LA27261-9 "DCIS present with extensive intraductal component (EIC)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-Instance: us-core-observation-lab-tumor-grade-jenny-m
+Instance: observation-lab-tumor-grade-jenny-m
 InstanceOf:  Observation
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
@@ -509,7 +509,7 @@ Description: "Extended example: example showing Oncotype DX breast recurrence sc
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"
-* performer = Reference(us-core-organization-bedrock-medicine)
+* performer = Reference(organization-bedrock-medicine)
 * valueQuantity = 47 '{ScoreOf}' "Recurrence score"
 * interpretation = ObsInt#H "High"
 
@@ -524,7 +524,7 @@ Description: "Extended example: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
 * subject = Reference(cancer-patient-jenny-m)
-* requester = Reference(us-core-practitioner-owen-oncologist)
+* requester = Reference(practitioner-owen-oncologist)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
 * authoredOn = "2018-04-12"
@@ -544,7 +544,7 @@ Description: "Extended example: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
 * subject = Reference(cancer-patient-jenny-m)
-* requester = Reference(us-core-practitioner-owen-oncologist)
+* requester = Reference(practitioner-owen-oncologist)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
 * authoredOn = "2018-04-12"
@@ -564,7 +564,7 @@ Description: "Extended example: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(cancer-patient-jenny-m)
-* requester = Reference(us-core-practitioner-owen-oncologist)
+* requester = Reference(practitioner-owen-oncologist)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-12"
 * authoredOn = "2018-04-12"
@@ -596,11 +596,11 @@ Description: "Extended example: example showing chemotherapy medication"
 * category = MedReqCat#outpatient
 * medicationCodeableConcept = RXN#1790099 "doxorubicin hydrochloride 20 MG per 10 ML Injection"
 * subject = Reference(cancer-patient-jenny-m)
-* performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
+* performer.actor = Reference(practitioner-nancy-oncology-nurse)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * request = Reference(cancer-related-medication-request-doxorubicin-jenny-m)
 * effectiveDateTime = "2018-04-22"
-* note.authorReference = Reference(us-core-practitioner-nancy-oncology-nurse)
+* note.authorReference = Reference(practitioner-nancy-oncology-nurse)
 * note.time = "2018-04-22"
 * note.text = "doxorubicin (60 mg/m² IV), 105.96 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
 * dosage.dose = 105.96 'mg' "mg"
@@ -614,10 +614,10 @@ Description: "Extended example: example showing chemotherapy medication"
 * category = MedReqCat#outpatient
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
 * subject = Reference(cancer-patient-jenny-m)
-* performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
+* performer.actor = Reference(practitioner-nancy-oncology-nurse)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * effectiveDateTime = "2018-04-22"
-* note.authorReference = Reference(us-core-practitioner-nancy-oncology-nurse)
+* note.authorReference = Reference(practitioner-nancy-oncology-nurse)
 * note.time = "2018-04-22"
 * note.text = "cyclophosphamide (60 mg/m² IV), 932.59 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
 * dosage.dose = 932.59 'mg' "mg"
@@ -631,7 +631,7 @@ Description: "Extended example: example showing chemotherapy medication"
 * category = MedReqCat#outpatient
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(cancer-patient-jenny-m)
-* performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
+* performer.actor = Reference(practitioner-nancy-oncology-nurse)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * note.time = "2018-04-12"
 * note.text = "PACLitaxel (175 mg/m² IV), 272.01mg"
@@ -664,7 +664,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 
 // FOR TESTING
 /*
@@ -686,7 +686,7 @@ RuleSet: CourseSummaryContent
 * extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 
 Instance: radiotherapy-treatment-valid-modality-technique-combos
 InstanceOf: RadiotherapyCourseSummary
@@ -866,7 +866,7 @@ Description: "Extended example: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#84857 "anastrozole"
 * subject = Reference(cancer-patient-jenny-m)
-* requester = Reference(us-core-practitioner-owen-oncologist)
+* requester = Reference(practitioner-owen-oncologist)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-09-30"
 * authoredOn = "2018-09-30"
@@ -878,7 +878,7 @@ Description: "Extended example: example showing chemotherapy medication"
 
 // Check side effects
 
-Instance: us-core-observation-lab-neutrophils-jenny-m
+Instance: observation-lab-neutrophils-jenny-m
 InstanceOf: Observation
 Description: "Extended example: neutrophils lab test"
 * status = #final "final"
@@ -900,7 +900,7 @@ Description: "Extended example: example showing disease status (patient's condit
 * code = LNC#97509-4 "Cancer Disease Progression"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-11-01"
-* performer = Reference(us-core-practitioner-owen-oncologist)
+* performer = Reference(practitioner-owen-oncologist)
 * focus = Reference(primary-cancer-condition-jenny-m)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
@@ -930,7 +930,7 @@ Description: "Extended example: example cancer patient"
 * communication.language = urn:ietf:bcp:47#en-US
 * communication.language.text = "English"
 
-Instance: us-core-practitioner-jane-radiotech
+Instance: practitioner-jane-radiotech
 InstanceOf: Practitioner
 Description: "Extended example: example PCP practitioner"
 * name.family = "Radiologist"
@@ -946,7 +946,7 @@ Description: "Extended example: example PCP practitioner"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
 * qualification.code.coding[0].version = "2.7"
 
-Instance: us-core-practitioner-mary-obgyn
+Instance: practitioner-mary-obgyn
 InstanceOf: Practitioner
 Description: "Extended example: example PCP practitioner"
 * name.family = "Obgyn"
@@ -963,7 +963,7 @@ Description: "Extended example: example PCP practitioner"
 * qualification.code.coding[0].version = "2.7"
 
 
-Instance: us-core-practitioner-owen-oncologist
+Instance: practitioner-owen-oncologist
 InstanceOf: Practitioner
 Description: "Extended example: example practitioner"
 * name.family = "Oncologist"
@@ -979,7 +979,7 @@ Description: "Extended example: example practitioner"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
 * qualification.code.coding[0].version = "2.7"
 
-Instance: us-core-practitioner-peter-pathologist
+Instance: practitioner-peter-pathologist
 InstanceOf: Practitioner
 Description: "Extended example: example practitioner (pathologist)"
 * name.family = "Pathologist"
@@ -995,7 +995,7 @@ Description: "Extended example: example practitioner (pathologist)"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
 * qualification.code.coding[0].version = "2.7"
 
-Instance: us-core-practitioner-nancy-oncology-nurse
+Instance: practitioner-nancy-oncology-nurse
 InstanceOf: Practitioner
 Description: "Extended example: example RN practitioner"
 * name.family = "Nurse"
@@ -1011,7 +1011,7 @@ Description: "Extended example: example RN practitioner"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#RN
 * qualification.code.coding[0].version = "2.7"
 
-Instance: us-core-organization-physician-services-inc
+Instance: organization-physician-services-inc
 InstanceOf: Organization
 Description: "Extended example: example organization"
 * active = true
@@ -1026,7 +1026,7 @@ Description: "Extended example: example organization"
 * address.postalCode = "12345"
 * address.country = "US"
 
-Instance: us-core-organization-bedrock-medicine
+Instance: organization-bedrock-medicine
 InstanceOf: Organization
 Description: "Example of Organization"
 * active = true
@@ -1062,5 +1062,5 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* asserter = Reference(practitioner-kyle-anydoc)
 */

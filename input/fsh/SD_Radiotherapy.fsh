@@ -262,7 +262,7 @@ If either Modality value set needs to be extended, here are the invariants;
     Severity:   #error
 
 Profile: BrachytherapyImplantableDevice
-Parent:  USCoreImplantableDeviceProfile
+Parent:  Device
 Id:      mcode-brachytherapy-implantable-device
 Title: "Brachytherapy Implantable Device Profile"
 Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."

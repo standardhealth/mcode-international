@@ -81,7 +81,7 @@ Description: "mCODE Example for Tumor Marker Test"
 * code = LNC#39004-7 "Epidermal growth factor receptor Ag [Presence] in Tissue"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(us-core-practitioner-kyle-anydoc)
+* performer = Reference(practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
 Instance: human-specimen-lung
@@ -90,6 +90,6 @@ Description: "mCODE Example of human specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)
 * processing.timeDateTime = "2019-03-20"
-* collection.collector = Reference(us-core-practitioner-kyle-anydoc)
+* collection.collector = Reference(practitioner-kyle-anydoc)
 * type = SPTY#TISS "Tissue"
 * collection.bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"

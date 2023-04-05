@@ -38,7 +38,7 @@ Description: "GenomeX example: Order information"
 * reasonCode[0].coding[0] = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
 * reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
 
-Instance: gx-us-core-organization-tempus-inc
+Instance: gx-organization-tempus-inc
 InstanceOf: Organization
 Description: "GenomeX example: example organization"
 * active = true
@@ -58,7 +58,7 @@ Description: "GenomeX example: example organization"
 * address.country = "US"
 * contact.name.text = "Nike Beaubier, MD, FCAP, MGP"
 
-Instance: gx-us-core-organization-test-institution
+Instance: gx-organization-test-institution
 InstanceOf: Organization
 Description: "GenomeX example: example organization"
 * active = true
@@ -356,7 +356,7 @@ Description: "GenomeX Example for Genomics Report"
 * status = #final "Final"
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
-* performer = Reference(gx-us-core-organization-tempus-inc)
+* performer = Reference(gx-organization-tempus-inc)
 * effectiveDateTime = "2022-02-15T19:28:58+05:00"
 * basedOn = Reference(gx-order-tumornormal-tempus-inc)
 * resultsInterpreter = Reference(gx-practitioner-test-pathologist)
